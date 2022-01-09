@@ -1,24 +1,22 @@
-# README
+# flashCard
+This flashcard app demonstrates Rails 7 with PostgreSQL, all running in Docker.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Feature
+- Ruby 3.1.0
+- Rails 7
+- PostgreSQL 13 database
 
-Things you may want to cover:
+## Setup
+```
+cp .env.example .env
+docker compose build
+docker compose run --rm web bin/rails db:setup
+```
 
-* Ruby version
+## Running the app
+```
+docker-compose up -d
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Reference
+- https://docs.docker.com/samples/rails/
